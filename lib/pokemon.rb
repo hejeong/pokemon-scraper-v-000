@@ -22,6 +22,6 @@ class Pokemon
           SELECT * FROM pokemon WHERE id = ?
           SQL
     row = db.execute(sql, id)[0]
-    
+    self.new(row[1], row[2], db, id: row[0])
   end
 end
