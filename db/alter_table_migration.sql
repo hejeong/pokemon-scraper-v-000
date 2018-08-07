@@ -1,1 +1,1 @@
-ALTER TABLE pokemon ADD hp INTEGER not nil;
+ALTER TABLE pokemon ADD hp INTEGER NOT NIL;
