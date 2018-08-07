@@ -24,4 +24,9 @@ class Pokemon
     row = db.execute(sql, id)[0]
     self.new(name: row[1], type: row[2], db: db, id: row[0])
   end
+
+  def alter_hp(new_hp, db)
+    db.execute("UPDATE pokemon SET hp = ? WHERE name = ?", new_hp, self.to_s.capitalize)
+    
+  end
 end
